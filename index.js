@@ -5,14 +5,12 @@ require('dotenv/config');
 const PORT = process.env.PORT || 3000;
 const string = process.env.UPSIDEDOWN_MODE;
 
-const verifyTruOrFalse = (string) => {
-  if (string ===  'true') return true;
+const verifyTruOrFalse = (param) => {
+  if (param === 'true') return true;
   return false;
 };
 
 const UPSIDEDOWN_MODE = verifyTruOrFalse(string);
-console.log(typeof UPSIDEDOWN_MODE);
-console.log(UPSIDEDOWN_MODE);
 
 const strangerThingsDataset = require('./data/dataset/stranger-things-characters.json');
 const StrangerThingsRepository = require('./data/repository/StrangerThings');
